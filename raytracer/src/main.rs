@@ -27,8 +27,8 @@ fn main() {
             let g: f64 = (j as f64) / ((height - 1) as f64) * 255.999;
             let b: f64 = 0.25 * 255.999;
             *pixel = image::Rgb([r as u8, g as u8, b as u8]);
+            progress.inc(1);
         }
-        progress.inc(1);
     }
     progress.finish();
 
